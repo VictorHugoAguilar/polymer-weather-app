@@ -1,5 +1,4 @@
-# \<weather-app\>
-
+# WeatherApp - Polymer 2
 
 
 ## Install the Polymer-CLI
@@ -30,4 +29,9 @@ $ polymer serve build/default
 $ polymer test
 ```
 
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+# Screenshot
+
+![alt text](https://github.com/VictorHugoAguilar/polymer-weather-app/blob/main/assets/screenshot/screenshot_0a.png?raw=true)
+![alt text](https://github.com/VictorHugoAguilar/polymer-weather-app/blob/main/assets/screenshot/screenshot_0b.png?raw=true)
+![alt text](https://github.com/VictorHugoAguilar/polymer-weather-app/blob/main/assets/screenshot/screenshot_1a.png?raw=true)
+![alt text](https://github.com/VictorHugoAguilar/polymer-weather-app/blob/main/assets/screenshot/screenshot_1b.png?raw=true)
