@@ -1,0 +1,25 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-if.html">
+
+<dom-module id="item-forecast">
+    <link rel="import" href="./item-forecast.css" type="css">
+    <template>
+
+        <template is="dom-if" if="[[show]]">
+            <div class="container">
+                <div class="main">
+                    <div class="item">
+                        <wheather-central-icon state="[[item.weather.0.main]]"></wheather-central-icon>
+                        <div class="temp mt">[[item.main.temp]] º</div>
+                        <div class="hum mt">[[item.main.humidity]] %</div>
+                        <div class="min mt"> [[item.main.temp_min]] º <span class="prefix">min</span></div>
+                        <div class="max mt">[[item.main.temp_max]] º <span class="prefix">max</span></div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+    </template>
+
+    <script src="./item-forecast.js"> </script>
+</dom-module>

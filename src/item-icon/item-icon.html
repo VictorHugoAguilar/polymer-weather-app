@@ -1,0 +1,30 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="item-icon">
+    <link rel="import" href="./item-icon.css" type="css">
+
+    <template>
+        <template is="dom-if" if="[[isWind]]">
+            <svg class="vector">
+                <use xlink:href="../../assets/icons/wind.svg#wind"></use>
+            </svg>
+        </template>
+        <template is="dom-if" if="[[isPressure]]">
+            <svg class="vector">
+                <use xlink:href="../../assets/icons/pressure.svg#pressure"></use>
+            </svg>
+        </template>
+        <template is="dom-if" if="[[isHumidity]]">
+            <svg class="vector">
+                <use xlink:href="../../assets/icons/humidity.svg#humidity"></use>
+            </svg>
+        </template>
+        <template is="dom-if" if="[[isTemperature]]">
+            <svg class="vector">
+                <use xlink:href="../../assets/icons/temperature.svg#temperature"></use>
+            </svg>
+        </template>
+    </template>
+
+    <script src="./item-icon.js"></script>
+</dom-module>

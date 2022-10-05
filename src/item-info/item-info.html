@@ -1,0 +1,29 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-if.html">
+<!-- CUSTOM COMPONENT -->
+<link rel="import" href="../item-icon/item-icon.html">
+
+<dom-module id="item-info">
+    <link rel="import" href="./item-info.css" type="css">
+
+    <template>
+        <div class="container">
+            <div class="main">
+
+                <div class="text">[[value]] <span class="prefix">[[prefix]]</span></div>
+
+                <template is="dom-if" if="[[optional]]">
+                    <div class="text-optional">[[valueOptional]] <span class="prefix">º</span></div>
+                </template>
+
+                <div class="icon">
+                    <item-icon type="[[type]]"></item-icon>
+                </div>
+
+            </div>
+        </div>
+
+    </template>
+
+    <script src="./item-info.js"></script>
+</dom-module>

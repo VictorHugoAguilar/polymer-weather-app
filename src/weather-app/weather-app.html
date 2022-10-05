@@ -1,0 +1,59 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-if.html">
+<!-- EXTERNAL COMPONENT -->
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+<!-- CUSTOM COMPONENT -->
+<link rel="import" href="../weather-header/weather-header.html">
+<link rel="import" href="../weather-info/weather-info.html">
+<link rel="import" href="../wheather-central-icon/wheather-central-icon.html">
+<link rel="import" href="../weather-footer/weather-footer.html">
+<link rel="import" href="../weather-forecast/weather-forecast.html">
+<link rel="import" href="../weather-error/weather-error.html">
+
+
+<dom-module id="weather-app">
+  <link rel="import" href="./weather-app.css" type="css">
+
+  <template>
+    <div class="container">
+
+      <iron-ajax
+        url="https://api.openweathermap.org/data/2.5/weather?q=[[city]]&lang=sp&units=metric&appid=a3ceab3e23ffcdd813e6283041b025d8"
+        handle-as="json" last-response="{{ data }}" on-response="handleResponse" auto on-error="_error"></iron-ajax>
+
+      <iron-ajax
+        url="https://api.openweathermap.org/data/2.5/forecast?q=[[city]]&units=metric&lang=es&appid=a3ceab3e23ffcdd813e6283041b025d8"
+        handle-as="json" last-response="{{ dataForecast }}" on-response="handleResponseForecast" auto></iron-ajax>
+
+      <div class="main">
+        <weather-header city="[[city]]" on-change-city="_changeCity" on-change-view="_changeView" error="[[error]]">
+        </weather-header>
+
+        <template is="dom-if" if="[[!error]]">
+          <weather-info data="[[info]]"></weather-info>
+        </template>
+      </div>
+
+      <template is="dom-if" if="[[error]]">
+        <weather-error></weather-error>
+      </template>
+
+      <template is="dom-if" if="[[!error]]">
+        <div class="sub-main">
+
+          <template is="dom-if" if="[[mainView]]">
+            <wheather-central-icon state="[[forestcast.title]]"></wheather-central-icon>
+            <weather-footer main="[[forestcast.title]]" description="[[forestcast.description]]"> </weather-footer>
+          </template>
+
+          <template is="dom-if" if="[[!mainView]]">
+            <weather-forecast forecast="[[dataForecast]]"> </weather-forecast>
+          </template>
+        </div>
+      </template>
+    </div>
+
+  </template>
+
+  <script src="./weather-app.js"> </script>
+</dom-module>

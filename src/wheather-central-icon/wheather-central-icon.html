@@ -1,0 +1,82 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-if.html">
+
+<dom-module id="wheather-central-icon">
+    <link rel="import" href="wheather-central-icon.css" type="css">
+
+    <template>
+
+        <div class="container">
+
+            <template is="dom-if" if="[[isThunderstorm]]" restamp>
+                <svg id="vector" class="vector">
+                    <use xlink:href="../../assets/states/cloud_flash.svg#cloud_flash"></use>
+                </svg>
+            </template>
+
+            <template is="dom-if" if="[[isDrizzle]]" restamp>
+                <svg id="vector" class="vector">
+                    <use xlink:href="../../assets/states/rain_water_drop.svg#rain_water_drop"></use>
+                </svg>
+            </template>
+
+            <template is="dom-if" if="[[isRain]]">
+                <svg id="vector" class="vector">
+                    <use xlink:href="../../assets/states/cloud_rain.svg#cloud_rain"></use>
+                </svg>
+            </template>
+
+            <template is="dom-if" if="[[isSnow]]">
+                <svg id="vector" class="vector">
+                    <use xlink:href="../../assets/states/cloud_snow.svg#cloud_snow"></use>
+                </svg>
+            </template>
+
+            <template is="dom-if" if="[[isClouds]]">
+                <svg id="vector" class="vector">
+                    <use xlink:href="../../assets/states/cloud.svg#cloud"></use>
+                </svg>
+            </template>
+
+            <template is="dom-if" if="[[isClear]]">
+                <svg id="vector" class="vector">
+                    <use xlink:href="../../assets/states/sun_sunny.svg#sun_sunny"></use>
+                </svg>
+            </template>
+
+            <template is="dom-if" if="[[isAtmosphere]]">
+                <svg id="vector" class="vector">
+                    <use xlink:href="../../assets/states/rainbow.svg#rainbow"></use>
+                </svg>
+            </template>
+
+            <template is="dom-if" if="[[isFog]]">
+                <svg id="vector" class="vector">
+                    <use xlink:href="../../assets/states/fog.svg#fog"></use>
+                </svg>
+            </template>
+
+            <template is="dom-if" if="[[isTornado]]">
+                <svg id="vector" class="vector">
+                    <use xlink:href="../../assets/states/tornado.svg#tornado"></use>
+                </svg>
+            </template>
+
+            <template is="dom-if" if="[[isMist]]">
+                <svg id="vector" class="vector">
+                    <use xlink:href="../../assets/states/fog.svg#fog"></use>
+                </svg>
+            </template>
+
+            <template is="dom-if" if="[[isNotData]]">
+                <svg id="vector" class="vector ">
+                    <use xlink:href="../../assets/states/not-data.svg#not-data"></use>
+                </svg>
+            </template>
+
+        </div>
+
+    </template>
+
+    <script src="./wheather-central-icon.js"> </script>
+</dom-module>

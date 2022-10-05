@@ -1,0 +1,64 @@
+:host {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.main {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sub-menu {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.menu {
+    width: 10%;
+    display: flex;
+    padding-right: 20px;
+}
+
+.input {
+    width: 100%;
+}
+
+.input-city {
+    background-color: transparent;
+    border: none;
+    border-bottom: thin solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.input-city::placeholder {
+    color: var(--color-primary-ligth);
+}
+
+
+.content {
+    padding: 5%;
+}
+
+.triangulo-equilatero-bottom {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid var(--color-primary);
+}
+
+.selector_city {
+    margin-left: 70px;
+}
+
+.selector_forescast {
+    margin-left: 240px;
+}

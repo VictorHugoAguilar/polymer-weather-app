@@ -1,0 +1,58 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-if.html">
+
+<!-- EXTERNAL COMPONENT -->
+<link rel="import" href="../../bower_components/iron-input/iron-input.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+
+<dom-module id="weather-header">
+    <link rel="import" href="./weather-header.css" type="css">
+
+    <template>
+        <div class="container">
+            <div class="main">
+                <div class="sub-menu">
+
+                    <div class="city" on-click="_selectionMain">
+                        [[city]]
+                    </div>
+
+                    <div class="forecast" on-click="_selectionForescast">
+                        PRONÓSTICO
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <template is="dom-if" if="[[!open]]">
+                        <iron-icon icon="icons:menu" on-click="_menu"> </iron-icon>
+                    </template>
+                    <template is="dom-if" if="[[open]]">
+                        <iron-icon icon="icons:close" on-click="_menu"></iron-icon>
+                    </template>
+                </div>
+
+            </div>
+
+            <template is="dom-if" if="[[open]]">
+                <div class="input">
+                    <div class="content">
+                        <label class="label-city">Introducir una ciudad: </label>
+                        <iron-input>
+                            <input class="input-city" placeholder="ciudad" value="{{city::input}}"
+                                on-keypress="_changeCity">
+                        </iron-input>
+                    </div>
+                </div>
+            </template>
+
+            <template is="dom-if" if="[[!open]]">
+                <div class$="triangulo-equilatero-bottom [[selector]] "> </div>
+            </template>
+
+        </div>
+
+    </template>
+
+    <script src="./weather-header.js"> </script>
+</dom-module>

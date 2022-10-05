@@ -1,0 +1,34 @@
+type="temp" value='31º' value-optional="21º"
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="../item-info/item-info.html">
+
+<dom-module id="weather-info">
+    <link rel="import" href="./weather-info.css" type="css">
+
+    <template>
+
+        <div class="container">
+
+            <div class="temperature">
+                <span class="text-temperature"> [[data.temperature]]º</span>
+            </div>
+
+            <div class="information">
+
+                <div class="information-container">
+                    <div class="city">[[data.city]]</div>
+                    <item-info type="temp" value="[[data.maxim]]" value-optional="[[data.minimal]]"></item-info>
+                    <item-info type="pres" value="[[data.pressure]]"></item-info>
+                    <item-info type="wind" value="[[data.wind]]"></item-info>
+                    <item-info type="humi" value="[[data.humidity]]"></item-info>
+                </div>
+
+            </div>
+
+        </div>
+
+    </template>
+
+    <script src="./weather-info.js">  </script>
+</dom-module>

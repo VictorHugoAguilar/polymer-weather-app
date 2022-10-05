@@ -1,0 +1,28 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-repeat.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-if.html">
+
+<link rel="import" href="../item-forecast/item-forecast.html">
+
+
+<dom-module id="weather-forecast">
+    <link rel="import" href="./weather-forecast.css" type="css">
+
+    <template>
+
+        <div class="container">
+            <div class="main">
+
+                <template is="dom-repeat" items="[[list]]" as="item">
+
+                    <item-forecast index="[[index]]" item="[[item]]"></item-forecast>
+
+                </template>
+
+            </div>
+        </div>
+
+    </template>
+
+    <script src="./weather-forecast.js"> </script>
+</dom-module>

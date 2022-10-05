@@ -1,0 +1,28 @@
+:host {
+    display: block;
+    height: 20%;
+}
+
+.container {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding: 20px 0px 20px 20px;
+    font-family: monospace;
+    font-size: x-large;
+    text-transform: capitalize;
+}
+
+.main {
+    margin-bottom: 4px;
+    padding: 5px;
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.description {
+    display: inline-block;
+    padding: 5px;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}

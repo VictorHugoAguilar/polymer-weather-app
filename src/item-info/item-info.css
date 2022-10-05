@@ -1,0 +1,11 @@
+:host {
+    display: block;
+    width: 100%;
+    color: var(--color-primary)
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

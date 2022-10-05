@@ -1,0 +1,27 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-if.html">
+
+<dom-module id="weather-footer">
+    <link rel="import" href="./weather-footer.css" type="css">
+
+    <template>
+
+        <div class="container">
+
+            <div class="main">
+                [[title]]
+            </div>
+            <br>
+
+            <template is="dom-if" if="[[haveData]]">
+                <div class="description">
+                    [[description]]
+                </div>
+            </template>
+
+        </div>
+
+    </template>
+
+    <script src="./weather-footer.js"> </script>
+</dom-module>

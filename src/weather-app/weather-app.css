@@ -1,0 +1,28 @@
+:host {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+
+    --weather-central-icon-fill: var(--color-primary);
+    --weather-central-icon-width: 350px;
+    --weather-central-icon-height: 350px;
+}
+
+.container {
+    border-radius: 50px;
+    width: 400px;
+    height: 800px;
+    background-color: var(--color-background-sunner);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main {
+    width: 100%;
+    height: 30%;
+}
+
+.sub-main {
+    width: 100%;
+    height: 65%;
+}

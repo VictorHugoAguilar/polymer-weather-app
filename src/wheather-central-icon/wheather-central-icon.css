@@ -1,0 +1,17 @@
+:host {
+    display: block;
+    height: 75%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vector {
+    width: var(--weather-central-icon-width, 350px);
+    height: var(--weather-central-icon-heigh, 350px);
+    color: var(--weather-central-icon-fill, black);
+    stroke: var(--weather-central-icon-stroke)
+}

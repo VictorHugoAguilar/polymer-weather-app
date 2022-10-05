@@ -1,0 +1,35 @@
+:host {
+    display: block;
+    --weather-central-icon-width: 50px;
+    --weather-central-icon-heigh: 50px;
+}
+
+.container {
+    color: var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+    padding: 2px;
+
+}
+
+wheather-central-icon {
+    display: inline-block;
+}
+
+.main {
+    padding: 0px 10px 0px 10px;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: large;
+}
+
+.mt {
+    margin-top: 15px;
+}
+
+.prefix {
+    font-size: smaller;
+}
